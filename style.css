@@ -1,24 +1,85 @@
 
-.body{
-    background-color: rgb(2, 2, 68);
+/* CSS reset */
+*{
+    margin:0;
+    padding:0;
+    font-family: arial, sans-serif;
+    box-sizing: border-box;
+}
+/* Definição da paleta de cores */
+/* https://color.adobe.com/pt/Teals-color-theme-19171364 */
+:root{
+    --teals-1: #0fc2c0;
+    --teals-2: #0caba8;
+    --teals-3: #008f8c;
+    --teals-4: #015958;
+    --teals-5: #023535;
 }
 .container{
-    display:block;
-    align-items: center;
-    background-color: rgb(13, 13, 151);
-    width: 350px;
-    height: 350px;  
+    position: relative;
+    margin:20px auto;
+    min-height: 560px;  
+    width: 500px;
 
 }
 .title{
-    font-size: 26px;
-    color: #fff;
+    font-size: 40px;
+    color: var(--teals-5);
     font-style: bold;
+    text-align: center;
+    padding-bottom: 30px;
+    padding: 2px 0 10px 0;
+    margin-bottom: 20px;
 }
 .text{
-    font-size: 16px;
-    color: #fff;
+    color: var(--teals-4);
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
 }
+label {
+    color: var(--teals-4);
+  }
 .email{
-    width: 70%;
+    width: 80%;
+    color: var(--teals-4);
+    margin-left: 5px;
 }
+ /*estilo do botão recover */
+.recover{
+    width: 100%!important;
+    cursor: pointer;  
+    background: var(--teals-3);
+    padding: 8px 5px;
+    color: #fff;
+    font-size: 20px;  
+    border: 1px solid #fff;   
+    margin: 20px 0 10px 0;  
+    border-radius: 5px;
+    transition: all 0.2s linear;
+  }
+  /* esconde as ancoras da tela */
+  a.recover {
+    display: none;
+  }
+
+/*estilo do botão recover no hover */
+  .recover:hover {
+    background: var(--teals-4);
+  }
+  .content{
+  position: absolute;
+  top: 0px;
+  width: 88%;   
+  padding: 18px 6% 60px 6%;
+  margin: 0 0 35px 0;
+  background: #f7f7f7;
+  border: 1px solid var(--teals-2);
+  border-radius: 5px;
+  }
+  /* remove a linha dos links */
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+   
