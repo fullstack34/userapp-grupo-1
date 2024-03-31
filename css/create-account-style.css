@@ -17,6 +17,11 @@
   --teals-5: #023535;
 }
 
+/* estilo dos placeholders */
+::placeholder {
+  color: #b3b3b3;
+}
+
 /* remove a linha dos links */
 a {
   text-decoration: none;
