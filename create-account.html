@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./css/create-account-style.css">
+</head>
+<body>
+    <div class="container">      
+      <div id="cadastro">
+        <form method="post" action="/login.html"> 
+          <h1>Cadastro</h1> 
+      
+          <p> 
+            <label for="nome_cad">Nome</label>
+            <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="nome" />
+          </p>
+            
+          <p> 
+              <label for="nome_cad">Sobrenome</label>
+              <input id="sobrenome_cad" name="sobrenome_cad" required="required" type="text" placeholder="sobrenome" />
+          </p>
+
+          <p> 
+            <label for="email_cad">E-mail</label>
+            <input id="email_cad" name="email_cad" required="required" type="email" placeholder="contato@dominio.com"/> 
+          </p>
+            
+          <p> 
+            <label for="senha_cad">Senha</label>
+            <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="ex. 1234"/>
+          </p>
+            
+          <p> 
+            <label for="confirma_senha_cad">Confirme a senha</label>
+            <input id="confirma_senha_cad" name="confirma_senha_cad" required="required" type="password" placeholder="ex. 1234"/>
+          </p>
+          <p> 
+            <input id="submit" type="submit" value="Cadastrar"/> 
+          </p>
+            
+          <p class="ja-registrado">  
+            Já tem conta?
+            <a href="/login.html"> Ir para Login </a>
+          </p>
+        </form>
+      </div> <!-- cadasto -->
+    </div> <!-- container -->
+</body>
+</html>
