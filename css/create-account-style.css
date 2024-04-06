@@ -1,22 +1,6 @@
-/* CSS reset */
-* { 
-  margin:0;
-  padding:0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  box-sizing: border-box;
-  font-size: 16px;
-}
+@import "reset.css";
+@import "variaveis.css";
  
-/* Definição da paleta de cores */
-/* https://color.adobe.com/pt/Teals-color-theme-19171364 */
-:root {
-  --teals-1: #0FC2C0;
-  --teals-2: #0CABA8;
-  --teals-3: #008F8C;
-  --teals-4: #015958;
-  --teals-5: #023535;
-}
-
 /* estilo dos placeholders */
 ::placeholder {
   color: #b3b3b3;
@@ -43,7 +27,7 @@ a.links {
 /* estilo do box do cadastro */
 #cadastro {
   position: absolute;
-  top: 0px;
+  top: 50px;
   width: 88%;   
   padding: 18px 6% 60px 6%;
   margin: 0 0 35px 0;
