@@ -1,133 +1,122 @@
-/* CSS reset */
-* { 
-    margin:0;
-    padding:0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    box-sizing: border-box;
-    font-size: 16px;
+@import "reset.css";
+@import "variaveis.css";
+ 
+body{
+  background-color: #01080E;
+}
+
+/* estilo dos placeholders */
+::placeholder {
+  color: #b3b3b3;
+}
+
+/* remove a linha dos links */
+a {
+  text-decoration: none;
+}
+ 
+/* esconde as ancoras da tela */
+a.links {
+  display: none;
+}
+
+/* define do container do cadastro */
+.container {
+  width: 400px;
+  min-height: 560px;    
+  margin: 0px auto;
+  position: relative;   
+}
+
+/* estilo do box do cadastro */
+#cadastro {
+  position: absolute;
+  top: 50px;
+  width: 88%;   
+  padding: 18px 6% 60px 6%;
+  margin: 0 0 35px 0;
+  background: #f7f7f7;
+  border: 1px solid var(--teals-2);
+  border-radius: 5px;
   }
-  
-  /* Definição da paleta de cores */
-  /* https://color.adobe.com/pt/Teals-color-theme-19171364 */
-  :root {
-    --teals-1: #0FC2C0;
-    --teals-2: #0CABA8;
-    --teals-3: #008F8C;
-    --teals-4: #015958;
-    --teals-5: #023535;
-  }
-  
-  /* estilo dos placeholders */
-  ::placeholder {
-    color: #b3b3b3;
-  }
-  
-  /* remove a linha dos links */
-  a {
-    text-decoration: none;
-  }
-  
-  /* esconde as ancoras da tela */
-  a.links {
-    display: none;
-  }
-  
-  /* define do container do cadastro */
-  .container {
-    width: 400px;
-    min-height: 560px;    
-    margin: 0px auto;
-    position: relative;   
-  }
-  
-  /* estilo do box do cadastro */
-  #cadastro {
-    position: absolute;
-    top: 0px;
-    width: 88%;   
-    padding: 18px 6% 60px 6%;
-    margin: 0 0 35px 0;
-    background: #f7f7f7;
-    border: 1px solid var(--teals-2);
-    border-radius: 5px;
-    }
-  
-  
-  /* linha de cabeçaho */
-  #cadastro h1 {
-    font-size: 48px;
-    color: var(--teals-5);
-    padding: 2px 0 10px 0;
-    font-weight: bold;
-    text-align: center;
-    padding-bottom: 30px;
-  }
-  
-  #cadastro p {
-    margin-bottom:10px;
-  }
-  
-  #cadastro label {
-    color: var(--teals-4);
-    display: block;
-  }
-  
-  /* inputs do cadastro */
-  #cadastro input {
-    width: 100%;
-  }
-  
-  /*estilo do botão submit */
-  #submit {
-    width: 100%!important;
-    cursor: pointer;  
-    background: var(--teals-3);
-    padding: 8px 5px;
-    color: #fff;
-    font-size: 20px;  
-    border: 1px solid #fff;
-    margin-top: 10px;
-    margin-bottom: 10px;  
-    border-radius: 5px;
-    transition: all 0.2s linear;
-  }
-  
-  /* estilo do botão submit no hover */
-  #submit:hover {
-    background: var(--teals-4);
-  }
-  
-  /* estilo da faixa para quem já tem conta */
-  #cadastro .ja-registrado{
-    position: absolute;
-    background: #e1eaeb;
-    color: var(--teals-3);
-    left: 0px;
-    height: 20px;
-    width: 350px;
-    padding: 17px 30px 20px 30px;
-    font-size: 16px;
-    text-align: center;
-    line-height: 0;
-    border-top: 1px solid #dbe5e8;
-    border-radius: 0 0  5px 5px;
-  }
-  
-  /* link para o login */
-  #cadastro .ja-registrado a {
-    font-weight: bold;
-    background: #f7f8f1;
-    padding: 6px;
-    color: var(--teals-2);
-    margin-left: 10px;
-    border: 1px solid var(--teals-1);
-    border-radius: 4px;  
-    transition: all 0.4s  linear;
-  }
-  
-  /* estilo do link para o login no hover */
-  #cadastro .ja-registrado a:hover {
-    color: var(--teals-4);
-    background: #f7f7f7;
-    border: 1px solid var(--teals-5);
-  }
+
+
+/* linha de cabeçaho */
+#cadastro h1 {
+  font-size: 48px;
+  color: var(--teals-5);
+  padding: 2px 0 10px 0;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+#cadastro p {
+  margin-bottom:10px;
+}
+
+#cadastro label {
+  color: var(--teals-4);
+  display: block;
+}
+
+/* inputs do cadastro */
+#cadastro input {
+  width: 100%;
+}
+
+/*estilo do botão submit */
+#submit {
+  width: 100%!important;
+  cursor: pointer;  
+  background: var(--teals-3);
+  padding: 8px 5px;
+  color: #fff;
+  font-size: 20px;  
+  border: 1px solid #fff;
+  margin-top: 10px;
+  margin-bottom: 10px;  
+  border-radius: 5px;
+  transition: all 0.2s linear;
+}
+ 
+/* estilo do botão submit no hover */
+#submit:hover {
+  background: var(--teals-4);
+}
+
+/* estilo da faixa para quem já tem conta */
+#cadastro .ja-registrado{
+  position: absolute;
+  background: #e1eaeb;
+  color: var(--teals-3);
+  left: 0px;
+  height: 20px;
+  width: 350px;
+  padding: 17px 30px 20px 30px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 0;
+  border-top: 1px solid #dbe5e8;
+  border-radius: 0 0  5px 5px;
+}
+ 
+/* link para o login */
+#cadastro .ja-registrado a {
+  font-weight: bold;
+  background: #f7f8f1;
+  padding: 6px;
+  color: var(--teals-2);
+  margin-left: 10px;
+  border: 1px solid var(--teals-1);
+  border-radius: 4px;  
+  transition: all 0.4s  linear;
+}
+ 
+/* estilo do link para o login no hover */
+#cadastro .ja-registrado a:hover {
+  color: var(--teals-4);
+  background: #f7f7f7;
+  border: 1px solid var(--teals-5);
+}
+
