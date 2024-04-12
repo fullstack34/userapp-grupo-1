@@ -1,6 +1,10 @@
 @import "reset.css";
 @import "variaveis.css";
  
+body{
+  background-color: #01080E;
+}
+
 /* estilo dos placeholders */
 ::placeholder {
   color: #b3b3b3;
