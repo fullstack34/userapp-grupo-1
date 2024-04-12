@@ -1,17 +1,9 @@
   /* Definição da paleta de cores */
-  /* https://color.adobe.com/pt/Teals-color-theme-19171364 */
   :root {
-    --teals-1: #0FC2C0;
-    --teals-2: #0CABA8;
-    --teals-3: #008F8C;
-    --teals-4: #015958;
-    --teals-5: #023535;
-    /* Variáveis da homepage.css */
     --color-primary: #2BDEFD;
-    --color-title: #D7F9FF;
-    /* --color-text: #98D4DE; */
-    --color-bg-darkhome: #01080E;
-    --btn-color-bg: #2BFDBE;
-    --color-text: #01080E;
-    --fiap-primary: #E81B5C;
+    --color-title: #FFFFFF;
+    --color-text: #FFFFFF;
+    --color-bg-darkhome: #051933;
+    --btn-color-bg: #09336666;
+    --fiap-primary: #a3ffbf;
   }
