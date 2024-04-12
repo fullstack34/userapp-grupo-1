@@ -19,6 +19,7 @@ body{
     justify-content: center;
     align-items: center;
     margin: auto;
+    background-color: #98D4DE;
 }
 /*A DIV DA ESTRUTURA DO MENU */
 .menu .log{
@@ -96,11 +97,11 @@ button .btn{
     border-radius: 4px;
     border: none;
     color: #fff;
-    background-color: #0CABA8;
+    background-color: var(--teals-3);
 /* Efeitos no buttons e animations */
 }
 .btn:hover{
-    background-color: #015958;
+    background-color: var(--teals-4);
     transition: 0.5s;
 }
 a:hover{
