@@ -7,27 +7,29 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 :root {
-    --teals-1: #0FC2C0;
-    --teals-2: #0CABA8;
-    --teals-3: #008F8C;
-    --teals-4: #015958;
-    --teals-5: #023535;
-  }
+    --color-primary: #2BDEFD;
+    --color-title: #D7F9FF;
+    --color-text: #98D4DE;
+    --color-bg-darkhome: #01080E;
+    --btn-color-bg: #2BFDBE;
+    --color-text: #01080E;
+    --fiap-primary: #E81B5C;
+    }
   
 body{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
-    background-color: #98D4DE;
+    background-color: var(--color-bg-darkhome);
 }
 /*A DIV DA ESTRUTURA DO MENU */
 .menu .log{
     margin-top: 50px;
     width: 500px;
     height: 500px;
-    border: solid 3px var(--teals-3);
-    background-color: #F7F7F7;
+    border: solid 3px var(--color-title);
+    background-color: var(--color-primary);
     display: block;
     text-align: center;
     flex-wrap: wrap;
@@ -38,7 +40,7 @@ body{
     font-weight: bold;
     font-size: 50px;
     margin: 40px;
-    color: var(--teals-5);
+    color: var(--color-bg-darkhome);
 }
 .container{
     margin: 20px;
@@ -64,14 +66,14 @@ p, a{
     padding-top: 15px;
     width: 100%;
     height: 50px;
-    background-color: #E1EAEB;
+    background-color: var(--color-title);
 }
 a{
-    background-color: #fff;
+    background-color: var(--btn-color-bg);
     color: var(--teals-3);
     padding: 4px;
     border-radius: 3px;
-    border:solid 1px #fff;
+    border:solid 1px var(--btn-color-bg);
     border: none;
     font-weight: bolder;
     box-shadow: 0.5px 0 5px 0.5px #0000002f;
@@ -96,17 +98,17 @@ button .btn{
     padding: 6px 156px;
     border-radius: 4px;
     border: none;
-    color: #fff;
-    background-color: var(--teals-3);
+    color: var(--color-bg-darkhome);
+    background-color: var(--btn-color-bg);
 /* Efeitos no buttons e animations */
 }
 .btn:hover{
-    background-color: var(--teals-4);
+    background-color: var(--color-title);
     transition: 0.5s;
 }
 a:hover{
     background-color: var(--teals-1);
-    color: #fff;
+    color: var(--color-bg-darkhome);
     transition: 0.5s;
     border: none;
 }
