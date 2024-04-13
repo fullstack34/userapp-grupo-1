@@ -74,10 +74,10 @@ p, a{
     height: 50px;
     color: var(--color-text);
 }
-a.conta{
+a.conta {
     color: var(--color-text);
     border: solid 0.5px #167bf7;
-}
+    }
 .paragraph{
     margin-top: 0px;
     color: var(--color-text);
