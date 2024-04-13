@@ -1,0 +1,112 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+    --teals-1: #0FC2C0;
+    --teals-2: #0CABA8;
+    --teals-3: #008F8C;
+    --teals-4: #015958;
+    --teals-5: #023535;
+  }
+  
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+/*A DIV DA ESTRUTURA DO MENU */
+.menu .log{
+    margin-top: 50px;
+    width: 500px;
+    height: 500px;
+    border: solid 3px var(--teals-3);
+    background-color: #F7F7F7;
+    display: block;
+    text-align: center;
+    flex-wrap: wrap;
+    border-radius: 5px;
+}
+/* OS H1, INPUT, BUTTON E LINKS*/
+.intro{
+    font-weight: bold;
+    font-size: 50px;
+    margin: 40px;
+    color: var(--teals-5);
+}
+.container{
+    margin: 20px;
+}
+
+label{
+    font-weight: bolder;
+    font-size: 20px;
+}
+#login-text, #password{
+    font-size: 15px;
+    border: solid 1px rgba(0, 0, 0, 0.579);
+    border-radius: 3px;
+    width: 300px;
+    height: 30px;
+    padding-left: 5px;
+    text-align: start;
+    
+}
+p, a{
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 15px;
+    width: 100%;
+    height: 50px;
+    background-color: #E1EAEB;
+}
+a{
+    background-color: #fff;
+    color: var(--teals-3);
+    padding: 4px;
+    border-radius: 3px;
+    border:solid 1px #fff;
+    border: none;
+    font-weight: bolder;
+    box-shadow: 0.5px 0 5px 0.5px #0000002f;
+    font-size: 16px;
+    text-decoration: none;
+}
+button{
+    border: none;
+    margin: 25px;
+    
+}
+div .esqueceu-senha{
+    width: auto;
+    text-align: center;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+button .btn{
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 6px 156px;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    background-color: #0CABA8;
+/* Efeitos no buttons e animations */
+}
+.btn:hover{
+    background-color: #015958;
+    transition: 0.5s;
+}
+a:hover{
+    background-color: var(--teals-1);
+    color: #fff;
+    transition: 0.5s;
+    border: none;
+}
+
