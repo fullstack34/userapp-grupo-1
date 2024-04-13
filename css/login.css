@@ -6,26 +6,26 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-:root {
-    --teals-1: #0FC2C0;
-    --teals-2: #0CABA8;
-    --teals-3: #008F8C;
-    --teals-4: #015958;
-    --teals-5: #023535;
-  }
-  
+
 body{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
+
+    background-color: #98D4DE;
+
 }
 /*A DIV DA ESTRUTURA DO MENU */
 .menu .log{
     margin-top: 50px;
     width: 500px;
     height: 500px;
+
+    border: solid 3px #008f8d;
+
     border: solid 3px var(--teals-3);
+
     background-color: #F7F7F7;
     display: block;
     text-align: center;
@@ -37,7 +37,11 @@ body{
     font-weight: bold;
     font-size: 50px;
     margin: 40px;
+
+    color: #023535;
+
     color: var(--teals-5);
+
 }
 .container{
     margin: 20px;
@@ -67,20 +71,40 @@ p, a{
 }
 a{
     background-color: #fff;
+
+    color: #008f8d;
+    padding: 4px;
+    border-radius: 3px;
+    border:solid 1px #fff;
+
     color: var(--teals-3);
     padding: 4px;
     border-radius: 3px;
     border:solid 1px #fff;
     border: none;
+
     font-weight: bolder;
     box-shadow: 0.5px 0 5px 0.5px #0000002f;
     font-size: 16px;
     text-decoration: none;
 }
 button{
+
+    font-weight: bold;
+    font-size: 20px;
+    margin: 25px;
+    width: 368px;
+    height: 35px;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    background: #008f8d;
+    box-shadow: 0.5px 0 5px 0.5px #0000002f;
+
     border: none;
     margin: 25px;
     
+
 }
 div .esqueceu-senha{
     width: auto;
@@ -89,6 +113,8 @@ div .esqueceu-senha{
     box-shadow: none;
     background-color: transparent;
 }
+
+
 button .btn{
     font-size: 20px;
     font-weight: bolder;
@@ -96,11 +122,11 @@ button .btn{
     border-radius: 4px;
     border: none;
     color: #fff;
-    background-color: #0CABA8;
+    background-color: var(--teals-3);
 /* Efeitos no buttons e animations */
 }
 .btn:hover{
-    background-color: #015958;
+    background-color: var(--teals-4);
     transition: 0.5s;
 }
 a:hover{
@@ -109,4 +135,5 @@ a:hover{
     transition: 0.5s;
     border: none;
 }
+
 
