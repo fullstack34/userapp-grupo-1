@@ -7,7 +7,7 @@
     font-family: Inter, sans-serif;
 }
 :root{
-    --color-primary: #2BDEFD;
+  --color-primary: #2BDEFD;
   --color-title: #FFFFFF;
   --color-text: #FFFFFF;
   --color-bg-darkhome: #051933;
@@ -31,7 +31,7 @@ body{
     margin-top: 50px;
     width: 500px;
     height: 500px;
- feat-02-login
+ 
     border: solid 0.5px #167bf7;
     background-color: var(--btn-color-bg);
 
@@ -45,7 +45,6 @@ body{
     font-weight: bold;
     font-size: 32px;
     margin: 40px;
- feat-02-login
     color:  var(--color-title);
     margin-top: 20px;
     }
@@ -96,22 +95,17 @@ a{
     color: #008f8d;
     padding: 4px;
     border-radius: 3px;
-    border:solid 1px #fff;
     font-weight: bolder;
     font-size: 16px;
     text-decoration: none;
 }
 .button{
-
-
-
     font-size: 20px;
     margin: 25px;
     width: 368px;
     height: 45px;
     border-radius: 20px;
     border: none;
-
     color: var(--color-bg-darkhome);
 }
 .google{
@@ -130,7 +124,7 @@ a{
 a.google, a.esqueceu-senha{
     color: var(--color-text);
     font-size: 12px;
-       background: #008f8d;
+    background: #008f8d;
     box-shadow: 0.5px 0 5px 0.5px #0000002f;
     border: none;
     margin: 25px;
@@ -150,15 +144,5 @@ div .esqueceu-senha{
     text-decoration-line: underline;
 }
 
-
-
-/* Efeitos no buttons e animations */
-}
-a:hover{
-    background-color: var(--teals-1);
-    color: #fff;
-    transition: 0.5s;
-    border: none;
-}
 
 
