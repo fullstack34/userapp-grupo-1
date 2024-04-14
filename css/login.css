@@ -39,7 +39,7 @@ body{
     font-weight: bold;
     font-size: 32px;
     margin: 40px;
-    color: var(--color-bg-darkhome);
+    color: var(--color-primary);
     margin-top: 20px;
     }
 .sub-intro{
@@ -66,6 +66,7 @@ label{
     height: 40px;
     padding-left: 5px;
     text-align: start;
+    color: var(--color-text);
     background-color: var(--color-bg-darkhome);
         
 }
@@ -75,7 +76,7 @@ p, a{
     padding-top: 15px;
     width: 100%;
     height: 50px;
-    background-color: var(--color-title);
+    background-color: var();
 }
 a{
     background-color: var(--btn-color-bg);
@@ -92,6 +93,7 @@ a.conta {
     }
 .paragraph{
     margin-top: 0px;
+    text-align: center;
     color: var(--color-text);
 }
 a{
@@ -99,18 +101,20 @@ a{
     color: #008f8d;
     padding: 4px;
     border-radius: 3px;
-
+    text-align: center;
     font-weight: bolder;
     font-size: 16px;
     text-decoration: none;
 }
 .button{
     font-size: 20px;
-    margin: 25px;
-    width: 368px;
+    margin: 30px;
+    width: none;
     height: 45px;
+    font-size: 25px;
     border-radius: 20px;
     border: none;
+    background-color: #FFFFFF;
     color: var(--color-bg-darkhome);
 }
 .google{
@@ -163,7 +167,7 @@ button .btn{
 }
 a:hover{
     background-color: var(--teals-1);
-    color: var(--color-bg-darkhome);
+    color: var(--fiap-primary);
     transition: 0.5s;
     border: none;
     text-decoration-line: underline;
