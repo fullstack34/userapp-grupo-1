@@ -1,0 +1,9 @@
+  /* Definição da paleta de cores */
+  :root {
+    --color-primary: #2BDEFD;
+    --color-title: #FFFFFF;
+    --color-text: #FFFFFF;
+    --color-bg-darkhome: #051933;
+    --btn-color-bg: #09336666;
+    --fiap-primary: #a3ffbf;
+  }
