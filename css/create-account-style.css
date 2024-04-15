@@ -2,7 +2,7 @@
 @import "variaveis.css";
  
 body{
-  background-color: var(--color-bg-darkhome);
+  background-color: var(--color-bg-darkest);
 }
 
 /* estilo dos placeholders */
