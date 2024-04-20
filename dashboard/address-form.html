@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/create-account-style.css">
+    <title>Cadastro de endereço</title>
+</head>
+<body>
+  <nav id="navArea">
+    <a href="index.html" class="logo"><img class="logo" src="../images/LogoAppuser.png" alt="Logo APPUSER"></a>
+    <ul>
+      <li><a class="menu" href="address-form.html">Cadastrar endereço</a></li>
+      <li><a class="menu" href="address-list.html">Listar endereços</a></li>
+    </ul>     
+    <a href="#" id="btnContato" class="button">Contato</a>
+</nav>
+    <div class="container">
+        <div id="cadastro">
+            <form method="post" action="../dashboard/address-list.html"></form>
+              <h1>Cadastro de Endereço</h1>
+
+              <p> 
+                <label for="cep_cad">CEP</label>
+                <input id="cep_cad" required="required" type="text" placeholder="ex.: 60530-020" />
+              </p>
+
+              <p> 
+                <label for="rua_cad">Rua</label>
+                <input id="rua_cad" required="required" type="text" placeholder="ex.: Av. Antônio Sales" />
+              </p>
+
+              <p> 
+                <label for="numero_cad">Número</label>
+                <input id="numero_cad" type="text" placeholder="ex.: 100" required/>
+              </p>
+
+              <p> 
+                <label for="complemento">Complemento</label>
+                <input id="complemento"  type="text" placeholder="ex.: Ap00 BL00" />
+              </p>
+
+              <p> 
+                <label for="bairro">Bairro</label>
+                <input id="bairro"  type="text" placeholder="ex.: Aldeota" required/>
+              </p>
+
+              <p> 
+                <label for="cidade">Cidade</label>
+                <input id="cidade"  type="text" placeholder="ex.: Fortaleza" required/>
+              </p>
+
+              <p> 
+                <label for="uf">UF</label>
+                <input id="uf"  type="text" placeholder="ex.: CE" required/>
+              </p>
+
+              <p> 
+                <button id="submit" type="submit" value="Cadastrar">Cadastrar</button>
+              </p>
+
+
+        </div>
+    </div>
+</body>
+</html>
