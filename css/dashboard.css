@@ -71,8 +71,7 @@ li a.menu:hover {
 
 .content {
   width: 100%;
-  /* background-color: rgb(230,230,230); */
-  padding: 20px;
+  padding: 0px 20px;
 }
 
 
@@ -80,15 +79,14 @@ li a.menu:hover {
   width: 100%;
   margin-top: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .box-info-single {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 30%;
     margin: 0 10px;
-    /* padding: 30px; */
 
     box-shadow: 0.31em 0.37em 0.87em 0.87em rgba(0,0,0,.04);
     background-color: #051d3b;
@@ -114,14 +112,18 @@ li a.menu:hover {
   color: #ffba05;
 }
 
+#box4 {
+  color: #dc6ebe;
+}
+
 .info-text p{
   margin-top: 8px;;
 }
 
 .feed{
-  margin: 50px 10px;
+  margin: 30px 10px;
   width: 99%;
-  padding: 30px;
+  padding: 10px 30px;
   background-color: white;
   border-radius: 10px;
 }
@@ -129,7 +131,7 @@ li a.menu:hover {
 .feed-single {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .feed-text {
