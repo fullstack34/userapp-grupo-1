@@ -1,7 +1,9 @@
 @import "reset.css";
 @import "variaveis.css";
 
+
 body {
+  height: 100%;
   font-size: 16px;
   background-color: var(--color-bg-darkest);
 }
@@ -59,3 +61,99 @@ li a.menu:hover {
     text-decoration: 1px underline var(--fiap-primary);
   }
 
+/* Conteúdo do dashboard */
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.content {
+  width: 100%;
+  /* background-color: rgb(230,230,230); */
+  padding: 20px;
+}
+
+
+.box-info{
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-info-single {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 10px;
+    /* padding: 30px; */
+
+    box-shadow: 0.31em 0.37em 0.87em 0.87em rgba(0,0,0,.04);
+    background-color: #051d3b;
+    font-size: 1rem;
+    border-radius: .5em;
+    border: .03em solid #0d4d9c;
+    padding: 20px;
+    transition: .3s;
+}
+
+.box-info-single i{
+  font-size: 28px;
+}
+#box1 {
+  color: #00c86f;
+}
+
+#box2 {
+  color: #6bd1ff;
+}
+
+#box3 {
+  color: #ffba05;
+}
+
+.info-text p{
+  margin-top: 8px;;
+}
+
+.feed{
+  margin: 50px 10px;
+  width: 99%;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.feed-single {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.feed-text {
+  display: flex;
+}
+
+.feed-text span {
+  color: black;
+  display: inline-block;
+  margin: 10px;
+}
+
+
+.feed-text i{
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #c3dfff;
+  color: #73b4ff;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.feed-time {
+  color: #444;
+}
