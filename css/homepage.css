@@ -1,0 +1,82 @@
+@import "reset.css";
+@import "variaveis.css";
+
+body{
+    background-color: var(--color-bg-darkest);
+    background-image: url(../homepage.assets/img/pagina-inicial-base.webp);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+   
+.container{
+display: flex;
+margin: 0px 75.4px;
+padding: 35px 0px;
+cursor: pointer;
+}
+
+.container #txtBusca{
+    gap: 10px;
+    width: 35%;
+    padding: 0 1rem;
+    border: solid 1px #0D6271;
+    background-color:var(--color-bg-darkest);
+    color: var(--color-text);
+
+}
+
+.search{
+    display: flex;
+    width: 100%;
+    color: var(--color-bg-darkest);
+    height: 35px;
+    margin-left: 25px;
+    cursor: none;
+
+}
+
+.btn-login {
+    display: flex;
+}
+
+.btn-login a  {
+    color: var(--color-text);
+    font-size: 13px;
+    cursor: pointer;
+    padding: 0px 30px;
+    display: flex;
+    text-decoration: none;
+    
+}
+
+.matricule-se{
+    margin: 0;
+    font-size: 13px;
+    width: 180px;
+    height: 45px;
+    background-color: #14e6a7da;
+    border: none;
+    }
+
+h1{
+    margin: 0px 74.5px;
+    font-size: 64px;
+    color: var(--color-title);    
+}
+
+span{
+    color: var(--color-primary);
+}
+
+p{
+    color: var(--color-text);
+    font-size: 16px;
+    padding-left: 80px;
+}
+
+.btn-veja-planos{
+    width: 40%;
+    padding: 14px;
+    margin-left: 33px;
+    color: var(--color-bg-darkest);
+    }
