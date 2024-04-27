@@ -1,0 +1,71 @@
+@import url(./reset.css);
+@import url(./variaveis.css);
+
+body{
+    background-color: #01080E;
+}
+
+header{
+    background-color: var(--color-bg-darkhome);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+.appuser a img{
+   width: 125px;
+}
+
+
+.cadastrar-enderecos a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    padding: 17px;
+}
+
+.cadastrar-enderecos a:hover{
+    color: var(--fiap-primary);
+    transition: 0.5s;
+    text-decoration: 1px color(--fiap-primary);
+}
+
+.btn-contato{
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    background: var(--color-primary);
+    border-radius: 10px 0 10px 0;
+    color: var(--color-bg-darkhome);
+}
+
+.btn-contato:hover{
+    color: var(--fiap-primary);
+    transition: 0.5s;
+    text-decoration: 1px color(--fiap-primary);
+    
+}
+
+.table-informations{
+    width: 90%;
+    margin-left: 60px;
+    margin-top: 70px;
+    border-collapse: collapse;
+    table-layout: auto;
+    text-align: center;
+}   
+
+thead{
+    background-color: var(--color-bg-darkhome);
+}
+
+tr td{
+    border: solid 2px #0a469066;
+    color: #fff;
+    padding: 15px 20px ;
+    align-items: center;
+}
+
