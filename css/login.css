@@ -1,19 +1,12 @@
-
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
+@import "reset.css";
+@import "variaveis.css";
 
 body{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
-
-    background-color: #98D4DE;
+    background-color: var(--color-bg-darkhome);
 
 }
 /*A DIV DA ESTRUTURA DO MENU */
@@ -21,12 +14,8 @@ body{
     margin-top: 50px;
     width: 500px;
     height: 500px;
-
-    border: solid 3px #008f8d;
-
-    border: solid 3px var(--teals-3);
-
-    background-color: #F7F7F7;
+    border: solid 0.5px #167bf7;
+    background-color: var(--btn-color-bg);
     display: block;
     text-align: center;
     flex-wrap: wrap;
@@ -35,12 +24,16 @@ body{
 /* OS H1, INPUT, BUTTON E LINKS*/
 .intro{
     font-weight: bold;
-    font-size: 50px;
+    font-size: 32px;
     margin: 40px;
+    color: var(--color-primary);
+    margin-top: 20px;
+    }
+.sub-intro{
+    margin-top: -30px;
+    margin-bottom: 30px;
+    color: var(--color-text)
 
-    color: #023535;
-
-    color: var(--teals-5);
 
 }
 .container{
@@ -50,16 +43,19 @@ body{
 label{
     font-weight: bolder;
     font-size: 20px;
+    color: var(--color-text);
 }
 #login-text, #password{
     font-size: 15px;
     border: solid 1px rgba(0, 0, 0, 0.579);
     border-radius: 3px;
     width: 300px;
-    height: 30px;
+    height: 40px;
     padding-left: 5px;
     text-align: start;
-    
+    color: var(--color-text);
+    background-color: var(--color-bg-darkhome);
+        
 }
 p, a{
     text-align: center;
@@ -67,45 +63,74 @@ p, a{
     padding-top: 15px;
     width: 100%;
     height: 50px;
-    background-color: #E1EAEB;
+    background-color: var();
 }
 a{
-    background-color: #fff;
-
-    color: #008f8d;
-    padding: 4px;
-    border-radius: 3px;
-    border:solid 1px #fff;
-
+    background-color: var(--btn-color-bg);
     color: var(--teals-3);
     padding: 4px;
     border-radius: 3px;
-    border:solid 1px #fff;
+    border:solid 1px var(--btn-color-bg);
     border: none;
-
+    color: var(--color-text);
+}
+a.conta {
+    color: var(--color-text);
+    border: solid 0.5px #167bf7;
+    }
+.paragraph{
+    margin-top: 0px;
+    text-align: center;
+    color: var(--color-text);
+}
+a{
+    padding: 4px;
+    color: #008f8d;
+    padding: 4px;
+    border-radius: 3px;
+    text-align: center;
     font-weight: bolder;
-    box-shadow: 0.5px 0 5px 0.5px #0000002f;
     font-size: 16px;
     text-decoration: none;
 }
-button{
-
+.button{
+    font-size: 20px;
+    margin: 30px;
+    width: none;
+    height: 45px;
+    font-size: 25px;
+    border-radius: 20px;
+    border: none;
+    background-color: #FFFFFF;
+    color: var(--color-bg-darkhome);
+}
+.google{
     font-weight: bold;
     font-size: 20px;
     margin: 25px;
     width: 368px;
-    height: 35px;
-    border-radius: 3px;
-    border: none;
-    color: #fff;
+    height: 45px;
+    margin-top: -20px;
+    border-radius: 20px;
+    border: solid 0.5px rgb(252, 82, 82);
+    color: var(--color-text);
+    background-color: var(--btn-color-bg);
+    text-decoration-color: var(--color-text);
+    }
+a.google, a.esqueceu-senha{
+    color: var(--color-text);
+    font-size: 12px;
     background: #008f8d;
     box-shadow: 0.5px 0 5px 0.5px #0000002f;
-
     border: none;
     margin: 25px;
     
 
+
 }
+a.button{
+    color: var(--color-bg-darkhome);
+    }
 div .esqueceu-senha{
     width: auto;
     text-align: center;
@@ -113,27 +138,27 @@ div .esqueceu-senha{
     box-shadow: none;
     background-color: transparent;
 }
-
-
 button .btn{
     font-size: 20px;
     font-weight: bolder;
     padding: 6px 156px;
     border-radius: 4px;
     border: none;
-    color: #fff;
-    background-color: var(--teals-3);
+    color: var(--color-bg-darkhome);
+    background-color: var(--btn-color-bg);
 /* Efeitos no buttons e animations */
 }
 .btn:hover{
-    background-color: var(--teals-4);
+    background-color: var(--color-title);
     transition: 0.5s;
 }
 a:hover{
     background-color: var(--teals-1);
-    color: #fff;
+    color: var(--fiap-primary);
     transition: 0.5s;
     border: none;
+    text-decoration-line: underline;
 }
+
 
 
