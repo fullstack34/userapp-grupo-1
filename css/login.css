@@ -1,12 +1,31 @@
 @import "reset.css";
 @import "variaveis.css";
 
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: Inter, sans-serif;
+}
+:root{
+  --color-primary: #2BDEFD;
+  --color-title: #FFFFFF;
+  --color-text: #FFFFFF;
+  --color-bg-darkhome: #051933;
+  --btn-color-bg: #09336666;
+  --fiap-primary: #a3ffbf;
+}
+
 body{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
+
     background-color: var(--color-bg-darkhome);
+
 
 }
 /*A DIV DA ESTRUTURA DO MENU */
@@ -14,8 +33,10 @@ body{
     margin-top: 50px;
     width: 500px;
     height: 500px;
+
     border: solid 0.5px #167bf7;
     background-color: var(--btn-color-bg);
+
     display: block;
     text-align: center;
     flex-wrap: wrap;
@@ -26,6 +47,7 @@ body{
     font-weight: bold;
     font-size: 32px;
     margin: 40px;
+
     color: var(--color-primary);
     margin-top: 20px;
     }
@@ -33,6 +55,7 @@ body{
     margin-top: -30px;
     margin-bottom: 30px;
     color: var(--color-text)
+
 
 
 }
@@ -66,12 +89,15 @@ p, a{
     background-color: var();
 }
 a{
+
     background-color: var(--btn-color-bg);
+
     color: var(--teals-3);
     padding: 4px;
     border-radius: 3px;
     border:solid 1px var(--btn-color-bg);
     border: none;
+
     color: var(--color-text);
 }
 a.conta {
@@ -83,16 +109,7 @@ a.conta {
     text-align: center;
     color: var(--color-text);
 }
-a{
-    padding: 4px;
-    color: #008f8d;
-    padding: 4px;
-    border-radius: 3px;
-    text-align: center;
-    font-weight: bolder;
-    font-size: 16px;
-    text-decoration: none;
-}
+
 .button{
     font-size: 20px;
     margin: 30px;
@@ -105,6 +122,7 @@ a{
     color: var(--color-bg-darkhome);
 }
 .google{
+
     font-weight: bold;
     font-size: 20px;
     margin: 25px;
@@ -122,10 +140,10 @@ a.google, a.esqueceu-senha{
     font-size: 12px;
     background: #008f8d;
     box-shadow: 0.5px 0 5px 0.5px #0000002f;
+
     border: none;
     margin: 25px;
     
-
 
 }
 a.button{
@@ -138,18 +156,22 @@ div .esqueceu-senha{
     box-shadow: none;
     background-color: transparent;
 }
+
+
 button .btn{
     font-size: 20px;
     font-weight: bolder;
     padding: 6px 156px;
     border-radius: 4px;
     border: none;
+
     color: var(--color-bg-darkhome);
     background-color: var(--btn-color-bg);
 /* Efeitos no buttons e animations */
 }
 .btn:hover{
     background-color: var(--color-title);
+
     transition: 0.5s;
 }
 a:hover{
