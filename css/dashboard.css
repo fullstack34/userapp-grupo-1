@@ -1,0 +1,161 @@
+@import "reset.css";
+@import "variaveis.css";
+
+
+body {
+  height: 100%;
+  font-size: 16px;
+  background-color: var(--color-bg-darkest);
+}
+
+/* Faixa de navegação onde estão os menus e a logo */
+#navArea {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-bg-darkhome);
+  color: var(--color-text);
+  height: 60px;
+  padding: 0 24px;
+}
+
+/* Logotipo */
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+/* Itens do menu */
+.menu {
+  text-decoration: none;
+  color: var(--color-text);
+  text-underline-offset: 5px;
+  text-decoration: 1px underline transparent;
+  transition: text-decoration 1000ms ease;
+}
+
+/* Botão de contato à direita da faixa de navegação */
+#btnContato {
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    background: var(--fiap-primary);
+    border-radius: 10px 0 10px 0;
+    color: var(--color-bg-darkhome);
+}
+
+/* Itens do menu na horizontal e sem os bullet points*/
+#navArea ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+/* Efeito ao passar o mouse sobre um item do menu*/
+li a.menu:hover {
+    color: var(--fiap-primary);
+    transition: 1s;
+    text-decoration: 1px underline var(--fiap-primary);
+  }
+
+/* Conteúdo do dashboard */
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.content {
+  width: 100%;
+  padding: 0px 20px;
+}
+
+
+.box-info{
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.box-info-single {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    margin: 0 10px;
+
+    box-shadow: 0.31em 0.37em 0.87em 0.87em rgba(0,0,0,.04);
+    background-color: #051d3b;
+    font-size: 1rem;
+    border-radius: .5em;
+    border: .03em solid #0d4d9c;
+    padding: 20px;
+    transition: .3s;
+}
+
+.box-info-single i{
+  font-size: 28px;
+}
+#box1 {
+  color: #00c86f;
+}
+
+#box2 {
+  color: #6bd1ff;
+}
+
+#box3 {
+  color: #ffba05;
+}
+
+#box4 {
+  color: #dc6ebe;
+}
+
+.info-text p{
+  margin-top: 8px;;
+}
+
+.feed{
+  margin: 30px 10px;
+  width: 99%;
+  padding: 10px 30px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.feed-single {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.feed-text {
+  display: flex;
+}
+
+.feed-text span {
+  color: black;
+  display: inline-block;
+  margin: 10px;
+}
+
+
+.feed-text i{
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #c3dfff;
+  color: #73b4ff;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.feed-time {
+  color: #444;
+}

@@ -1,39 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alura | Cursos online de Tecnologia</title>  
-    <link rel="stylesheet" href="../css/homepage.css">
-    <link rel="icon" href="../homepage.assets/img/logo-tela-inicial.webp">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="icon" href=".//homepage.assets/img/logo-tela-inicial.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-  <header>
-    <div class="container">
-        <div class="logo"><img src="../homepage.assets/img/alura-logo-svg.svg"></div>
-        <div class="search">
-            <input type="text" id="txtBusca" placeholder="O que você quer aprender?">
-        </div>
-        <div class="btn-login">
-        <a href="https://www.alura.com.br/como-funciona"><strong>COMO FUNCIONA</strong></a>
-        <a href="https://www.alura.com.br/empresas"><strong>PARA EMPRESAS</strong></a>
-        <a href="../login.html"><strong>ENTRAR</strong></a>
-           
-            <button class="matricule-se"><a href="../create-account.html"><strong>CRIAR CONTA</strong></a></button>
-        </div>
-    </div>
-  </header>
-        <div class="title-apresentation">
-            <h1>Cursos<br>de<span> Tecnologia! </span></h1>
-            <p>Mergulhe em conteúdo com a maior comunidade de tecnologia do país.</p>
-        </div>
-        <div class="btn-veja-planos">
-            <button class="btn-veja-planos"><strong>VEJA OS PLANOS</strong></button>
-        </div> 
-    </div>
+    <nav id="navArea">
+        <a href="index.html" class="logo"><img class="logo" src="../images/LogoAppuser.png" alt="Logo APPUSER"></a>
+        <ul>
+          <li><a class="menu" href="./address-form.html">Cadastrar endereço</a></li>
+          <li><a class="menu" href="./address-list.html">Listar endereços</a></li>
+        </ul>     
+        <a href="#" id="btnContato" class="button">Contato</a>
+    </nav>
+    
+    <!-- Conteúdo do dashboard -->
+
+    <section class="main">
+        <div class="content">
+
+            <div class="box-info">
+                <div id="box1" class="box-info-single">
+                    <div class="info-text">
+                        <h3>Total de usuários</h3>
+                        <p>50</p>
+                    </div>
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <div id="box2" class="box-info-single">
+                    <div class="info-text">
+                        <h3>Total de endereços</h3>
+                        <p>250</p>
+                    </div>
+                    <i class="fa-solid fa-address-card"></i>
+                </div>
+            </div> <!-- box-info -->
+
+            <div class="box-info">
+                <div id="box3" class="box-info-single">
+                    <div class="info-text">
+                        <h3>Total de usuários (24h)</h3>
+                        <p>5</p>
+                    </div>
+                    <i class="fa-solid fa-user-group"></i>
+                </div>
+                <div id="box4" class="box-info-single">
+                    <div class="info-text">
+                        <h3>Total de endereços (24h)</h3>
+                        <p>25</p>
+                    </div>
+                    <i class="fa-regular fa-address-card"></i>
+                </div>
+            </div> <!-- box-info -->
+
+            <div class="feed">
+                <div class="feed-single">
+                    <div class="feed-text">
+                        <i class="fa-brands fa-leanpub"></i>
+                        <span>Novo tutorial de acesso à área do aluno</span>
+                    </div>
+                    <div class="feed-time">
+                        <h3>30 minutos atrás</h3>
+                    </div>
+                </div>
+                <div class="feed-single">
+                    <div class="feed-text">
+                        <i class="fa-brands fa-dev"></i>
+                        <span>Matrícula para curso de FullStack abertas</span>
+                    </div>
+                    <div class="feed-time">
+                        <h3>2 horas atrás </h3>
+                    </div>
+                </div>
+                <div class="feed-single">
+                    <div class="feed-text">
+                        <i class="fa-solid fa-champagne-glasses"></i>
+                        <span>Fotos da comemoração dos aniversariantes</span>
+                    </div>
+                    <div class="feed-time">
+                        <h3>6 horas atrás </h3>
+                    </div>
+                </div>
+                <div class="feed-single">
+                    <div class="feed-text">
+                        <i class="fa-brands fa-html5"></i>
+                        <span>Curso de HTML-5</span>
+                    </div>
+                    <div class="feed-time">
+                        <h3>5 dias atrás </h3>
+                    </div>
+                </div>
+            </div> <!-- feed -->
+
+          </div> <!-- content -->
+    </section> <!-- main -->
 </body>
+
 </html>
