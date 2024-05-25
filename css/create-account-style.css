@@ -119,3 +119,10 @@ a.links {
   border: 1px solid var(--color-primary);
 }
 
+.vermelho {
+  color: red;
+}
+
+.oculto {
+  display: none;
+}
