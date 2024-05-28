@@ -10,19 +10,52 @@ let avisoEmail = document.getElementById("aviso_email");
 let avisoSenha = document.getElementById("aviso_senha");
 let avisoConfirmaSenha = document.getElementById("aviso_confirma_senha");
 
-function testField(inputId,alertId) {
-    if (!inputId.value) {
-        alertId.classList.remove("oculto")
+function validateEmail(inputId,alertId){  
+    let emailValido = String(inputId.value)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+    if (emailValido) {
+        alertId.innerHTML = "";
+        return true;
     } else {
-        alertId.classList.add("oculto")
+        alertId.innerHTML = "Por favor, insira um endereço de e-mail válido";
+        return false;
+    }
+  };
+
+function testFieldEmpty(inputId,alertId) {
+    if (!inputId.value) {
+        alertId.innerHTML = "Campo obrigatório";
+        return false;
+    } else {
+        alertId.innerHTML = "";
+        return true;
     };
 };
 
 formCadastro.addEventListener('submit', function(event) {
-    event.preventDefault();
-    testField(nomeCad, avisoNome)
-    testField(sobrenomeCad, avisoSobrenome)
-    testField(emailCad, avisoEmail)
-    testField(senhaCad, avisoSenha)
-    testField(confirmaSenhaCad, avisoConfirmaSenha)
+    success = true;
+    success = testFieldEmpty(nomeCad, avisoNome) && success;
+    success = testFieldEmpty(sobrenomeCad, avisoSobrenome) && success;
+    if (emailCad.value) {
+        success = validateEmail(emailCad,avisoEmail) && success;
+    } else {
+        avisoEmail.innerHTML = "Campo obrigatório";
+        success = false
+    }
+    testFieldEmpty(senhaCad, avisoSenha);
+    if (!confirmaSenhaCad.value) {
+        avisoConfirmaSenha.innerHTML = "Campo obrigatório";
+        success = false
+    } else if (senhaCad.value && senhaCad.value !== confirmaSenhaCad.value) {
+            avisoConfirmaSenha.innerHTML = "As senhas não coincidem";
+            success = false
+    } else {
+            avisoConfirmaSenha.innerHTML = "";
+    }
+    if(!success) {
+        event.preventDefault();
+    }
   });
