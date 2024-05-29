@@ -1,3 +1,4 @@
+// Identifica os elementos da tela
 let formCadastro = document.getElementById("form_cadastro");
 let nomeCad = document.getElementById('nome_cad');
 let sobrenomeCad = document.getElementById('sobrenome_cad');
@@ -10,6 +11,10 @@ let avisoEmail = document.getElementById("aviso_email");
 let avisoSenha = document.getElementById("aviso_senha");
 let avisoConfirmaSenha = document.getElementById("aviso_confirma_senha");
 
+const div = document.querySelector('div'); 
+console.log(div.firstElementChild.nextElementSibling);
+
+// Realiza a validação do email
 function validateEmail(inputId,alertId){  
     let emailValido = String(inputId.value)
       .toLowerCase()
@@ -22,7 +27,7 @@ function validateEmail(inputId,alertId){
     } else {
         alertId.innerHTML = "Por favor, insira um endereço de e-mail válido";
         return false;
-    }
+    };
   };
 
 function testFieldEmpty(inputId,alertId) {
@@ -43,19 +48,19 @@ formCadastro.addEventListener('submit', function(event) {
         success = validateEmail(emailCad,avisoEmail) && success;
     } else {
         avisoEmail.innerHTML = "Campo obrigatório";
-        success = false
-    }
-    testFieldEmpty(senhaCad, avisoSenha);
+        success = false;
+    };
+    success = testFieldEmpty(senhaCad, avisoSenha) && success;
     if (!confirmaSenhaCad.value) {
         avisoConfirmaSenha.innerHTML = "Campo obrigatório";
-        success = false
+        success = false;
     } else if (senhaCad.value && senhaCad.value !== confirmaSenhaCad.value) {
             avisoConfirmaSenha.innerHTML = "As senhas não coincidem";
-            success = false
+            success = false;
     } else {
             avisoConfirmaSenha.innerHTML = "";
-    }
+    };
     if(!success) {
         event.preventDefault();
-    }
+    };
   });
