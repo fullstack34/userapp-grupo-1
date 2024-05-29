@@ -9,8 +9,9 @@
 <body>
     <div class="container">      
       <div id="cadastro">
-
-        <form method="post" action="login.html" id="form_cadastro"> 
+        
+        <!-- retirado o método "post" para evitar o erro "405 Not Allowed" -->
+        <form method="" action="login.html" id="form_cadastro"> 
 
           <h1>Cadastro</h1> 
 
@@ -23,25 +24,25 @@
           <p> 
               <label for="sobrenome_cad">Sobrenome</label>
               <input id="sobrenome_cad" name="sobrenome_cad" type="text" placeholder="sobrenome" />
-              <p class="vermelho" id="aviso_sobrenome"></p>
+              <div class="vermelho" id="aviso_sobrenome"></div>
           </p>
 
           <p> 
             <label for="email_cad">E-mail</label>
             <input id="email_cad" name="email_cad" type="text" placeholder="contato@dominio.com"/> 
-            <p class="vermelho" id="aviso_email"></p>
+            <div class="vermelho" id="aviso_email"></div>
           </p>
 
           <p> 
             <label for="senha_cad">Senha</label>
             <input id="senha_cad" name="senha_cad" type="password" placeholder="ex. 1234"/>
-            <p class="vermelho" id="aviso_senha"></p>
+            <div class="vermelho" id="aviso_senha"></div>
           </p>
 
           <p> 
             <label for="confirma_senha_cad">Confirme a senha</label>
             <input id="confirma_senha_cad" name="confirma_senha_cad" type="password" placeholder="ex. 1234"/>
-            <p class="vermelho" id="aviso_confirma_senha"></p>
+            <div class="vermelho" id="aviso_confirma_senha"></div>
           </p>
           <p> 
             <input id="submit" type="submit" value="Cadastrar"/> 
