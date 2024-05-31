@@ -68,7 +68,7 @@ label{
     font-size: 20px;
     color: var(--color-text);
 }
-#login-text, #password{
+#login-email, #password{
     font-size: 15px;
     border: solid 1px rgba(0, 0, 0, 0.579);
     border-radius: 3px;
@@ -180,6 +180,10 @@ a:hover{
     transition: 0.5s;
     border: none;
     text-decoration-line: underline;
+}
+.error{ 
+    color:red;
+    display:block;
 }
 
 

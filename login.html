@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href=".//homepage.assets/img/logo-tela-inicial.webp">
     <link rel="stylesheet" href="./css/login.css">
     <title>Login | Alura - Cursos online de teconlogia</title>
 </head>
@@ -10,20 +11,24 @@
     
     <div class="menu">
 
-        <div class="log">
+        <div class="log" id="login-page">
 
             <h1 class="intro">Já estuda com a gente?</h1>
             <h5 class="sub-intro">Faça seu login e boa aula!</h5>
                        
             <div class="container">
-                <label for="login-text">E-mail:</label>
+                <label for="login-email">E-mail:</label>
 
-                <input type="text" name="login" id="login-text" placeholder="Email ou telefone">
+                <input type="text" name="login" id="login-email" placeholder="contato@alura.com.br">
+                <span class="error" id="email-error"></span>
             </div>
             <div class="container">
 
                 <label for="password">Senha:</label>
-                <input type="password" name="login" id="password" placeholder="Senha">
+
+                <input type="password" name="login" id="password" placeholder="1234">
+
+                <span class="error" id="senha-error"></span>
             </div>
 
             
@@ -41,6 +46,7 @@
                 <a href="forgot-password.html" class="esqueceu-senha">Esqueci minha senha</a>
             </div>
         </div>
-    </body>
     </div>
+        <script src="./js/login.js"></script>
+    </body>
 </html>
