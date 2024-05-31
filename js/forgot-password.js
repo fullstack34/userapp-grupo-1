@@ -25,7 +25,7 @@ const showError = (msg, elementId) => {
       event.preventDefault();
     } 
     
-    else if(validateEmail !== true) {
+    else if(validateEmail(elements.inputEmail.value) !== true) {
       showError('Por favor, insira um endereço de e-mail válido.', 'email-error');
       console.log("Email inválido");
       event.preventDefault();
@@ -37,15 +37,16 @@ const showError = (msg, elementId) => {
       
   });
 
-  function validateEmail(inputEmail) {
-    var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-    return re.test(inputEmail);
-    if (validateEmail === true) {
-      console.log("Email inválido");
-    }
-    else{
-      console.log("Deu bom!");
-    }
-    }
 
-  
+   function validateEmail(inputEmailString) {
+    let emailValido = String(inputEmailString)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+      if (emailValido) {
+        return true;
+    } else {
+        return false;
+    };
+  }
