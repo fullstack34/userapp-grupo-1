@@ -12,6 +12,12 @@ body{
   color: #b3b3b3;
 }
 
+/*spam de campo obrigatório */
+#msg{
+ color: red;  
+ display:none;
+}
+
 /* remove a linha dos links */
 a {
   text-decoration: none;
@@ -61,6 +67,7 @@ a.links {
   color: var(--fiap-primary);
   display: block;
 }
+
 
 /* inputs do cadastro */
 #cadastro input {
