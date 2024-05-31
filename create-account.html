@@ -9,34 +9,40 @@
 <body>
     <div class="container">      
       <div id="cadastro">
-
-        <form method="post" action="login.html"> 
+        
+        <!-- retirado o método "post" para evitar o erro "405 Not Allowed" -->
+        <form method="" action="login.html" id="form_cadastro"> 
 
           <h1>Cadastro</h1> 
 
           <p> 
             <label for="nome_cad">Nome</label>
-            <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="nome" />
+            <input id="nome_cad" name="nome_cad" type="text" placeholder="nome" />
+            <div class="vermelho" id="aviso_nome"></div>
           </p>
 
           <p> 
-              <label for="nome_cad">Sobrenome</label>
-              <input id="sobrenome_cad" name="sobrenome_cad" required="required" type="text" placeholder="sobrenome" />
+              <label for="sobrenome_cad">Sobrenome</label>
+              <input id="sobrenome_cad" name="sobrenome_cad" type="text" placeholder="sobrenome" />
+              <div class="vermelho" id="aviso_sobrenome"></div>
           </p>
 
           <p> 
             <label for="email_cad">E-mail</label>
-            <input id="email_cad" name="email_cad" required="required" type="email" placeholder="contato@dominio.com"/> 
+            <input id="email_cad" name="email_cad" type="text" placeholder="contato@dominio.com"/> 
+            <div class="vermelho" id="aviso_email"></div>
           </p>
 
           <p> 
             <label for="senha_cad">Senha</label>
-            <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="ex. 1234"/>
+            <input id="senha_cad" name="senha_cad" type="password" placeholder="ex. 1234"/>
+            <div class="vermelho" id="aviso_senha"></div>
           </p>
 
           <p> 
             <label for="confirma_senha_cad">Confirme a senha</label>
-            <input id="confirma_senha_cad" name="confirma_senha_cad" required="required" type="password" placeholder="ex. 1234"/>
+            <input id="confirma_senha_cad" name="confirma_senha_cad" type="password" placeholder="ex. 1234"/>
+            <div class="vermelho" id="aviso_confirma_senha"></div>
           </p>
           <p> 
             <input id="submit" type="submit" value="Cadastrar"/> 
@@ -51,5 +57,6 @@
         </form>
       </div> <!-- cadasto -->
     </div> <!-- container -->
+    <script src="./js/create-account.js"></script>
 </body>
 </html>
