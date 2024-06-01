@@ -23,7 +23,8 @@
 
               <p> 
                 <label for="cep_cad">CEP *</label>
-                <input id="cep_cad" class="cep_cad required" type="text" placeholder=" XXXXX-XXX" oninput="validarCampo()" />
+                <input id="cep_cad" class="cep_cad required" type="text" placeholder=" XXXXX-XXX" oninput="validarCampo()" maxlength="9" onkeyup="handleZipCode(event)"/>
+
                 <span id="msg">O campo deve ter no mínimo 08 caracteres</span>
               </p>
 
