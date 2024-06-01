@@ -67,6 +67,12 @@ a.links {
   width: 100%;
 }
 
+#msg{
+  color: red;
+  display: none;
+}
+
+
 /*estilo do botão submit */
 #submit {
   width: 100%!important;
