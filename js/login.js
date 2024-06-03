@@ -3,8 +3,10 @@ const elements = {
     inputSenha: document.getElementById('password'),
     inputEmailError: document.getElementById('email-error'),
 
+
     inputSenhaError: document.getElementById('senha-error'),
     loginPage: document.getElementById('login-page')
+
 
     }
 
@@ -18,13 +20,16 @@ const elements = {
 
     const showSenhaError = (msg) => {
 
+
         elements.senhaError.textContent = msg;
+
 
     }
     
     const showSError = (msg, elementId) => {
         document.getElementById(elementId).textContent = msg;
       }
+
 
     
       elements.loginPage.addEventListener('click', (event) => {
@@ -65,6 +70,7 @@ const elements = {
             return false;
         };
       }
+
 
       
     
