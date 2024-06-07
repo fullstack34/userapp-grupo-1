@@ -181,6 +181,10 @@ a:hover{
     border: none;
     text-decoration-line: underline;
 }
+.error{ 
+    color:red;
+    display:block;
+}
 
 
 
