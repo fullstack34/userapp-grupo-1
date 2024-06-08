@@ -62,5 +62,13 @@ formCadastro.addEventListener('submit', function(event) {
     };
     if(!success) {
         event.preventDefault();
+    } else {
+        let userInfo = {
+            "nome": nomeCad.value,
+            "sobrenome": sobrenomeCad.value,
+            "email": emailCad.value,
+            "senha": senhaCad.value
+        };
+        window.localStorage.setItem('autentication', JSON.stringify(userInfo));
     };
   });
