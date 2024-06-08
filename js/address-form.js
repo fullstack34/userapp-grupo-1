@@ -1,3 +1,6 @@
+import MenuDashboard from "../js/menu-dashboard.js";
+
+document.getElementById("navArea").innerHTML = MenuDashboard();
 
 /*const form = document.getElementById('form_address')
 const validarCampo = document.getElementById('cep_cad');
