@@ -2,7 +2,6 @@ const elements = {
     inputEmail: document.getElementById('login-email'),
     inputSenha: document.getElementById('password'),
     inputEmailError: document.getElementById('email-error'),
-
     inputSenhaError: document.getElementById('senha-error'),
     loginPage: document.getElementById('login-page')
 
@@ -17,15 +16,12 @@ const elements = {
       }
 
     const showSenhaError = (msg) => {
-
         elements.senhaError.textContent = msg;
-
     }
     
     const showSError = (msg, elementId) => {
         document.getElementById(elementId).textContent = msg;
       }
-
     
       elements.loginPage.addEventListener('click', (event) => {
         let senhaLength = elements.inputSenha.value.length;
@@ -65,7 +61,3 @@ const elements = {
             return false;
         };
       }
-
-      
-    
-    
