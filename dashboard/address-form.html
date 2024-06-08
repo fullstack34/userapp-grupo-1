@@ -18,42 +18,49 @@
 </nav>
     <div class="container">
         <div id="cadastro">
-            <form method="post" action="../dashboard/address-list.html"></form>
+            <form id="form" method="post" action="../dashboard/address-list.html" oninput="form"></form>
               <h1>Cadastro de Endereço</h1>
 
               <p> 
-                <label for="cep_cad">CEP</label>
-                <input id="cep_cad" required="required" type="text" placeholder="ex.: 60530-020" />
+                <label for="cep_cad">CEP *</label>
+                <input id="cep_cad" class="cep_cad required" type="text" placeholder=" XXXXX-XXX" oninput="validarCampo()" maxlength="9" onkeyup="handleZipCode(event)"/>
+
+                <span id="msg">O campo deve ter no mínimo 08 caracteres</span>
               </p>
 
               <p> 
-                <label for="rua_cad">Rua</label>
-                <input id="rua_cad" required="required" type="text" placeholder="ex.: Av. Antônio Sales" />
+                <label for="rua_cad">Rua *</label>
+                <input id="rua_cad" class="rua_cad required" type="text" placeholder="ex.: Av. Antônio Sales" oninput="validarRua()" />
+                <span id="msg">Campo obrigatório</span>
               </p>
 
               <p> 
-                <label for="numero_cad">Número</label>
-                <input id="numero_cad" type="text" placeholder="ex.: 100" required/>
+                <label for="numero_cad">Número *</label>
+                <input id="numero_cad" type="text" placeholder="ex.: 100" class="numero_cad required" oninput="validarNumero()">
+                <span id="msg">Campo obrigatório</span>
               </p>
 
               <p> 
                 <label for="complemento">Complemento</label>
-                <input id="complemento"  type="text" placeholder="ex.: Ap00 BL00" />
+                <input id="complemento"  type="text" placeholder="ex.: Ap00 BL00 (opcional)"/>
               </p>
 
               <p> 
-                <label for="bairro">Bairro</label>
-                <input id="bairro"  type="text" placeholder="ex.: Aldeota" required/>
+                <label for="bairro">Bairro *</label>
+                <input id="bairro"  type="text" placeholder="ex.: Aldeota" class="bairro required" oninput="validarBairro()"/>
+                <span id="msg">Campo obrigatório</span>
               </p>
 
               <p> 
-                <label for="cidade">Cidade</label>
-                <input id="cidade"  type="text" placeholder="ex.: Fortaleza" required/>
+                <label for="cidade">Cidade *</label>
+                <input id="cidade"  type="text" placeholder="ex.: Fortaleza" class="cidade required" oninput="validarCidade()">
+                <span id="msg">Campo obrigatório</span>
               </p>
 
               <p> 
-                <label for="uf">UF</label>
-                <input id="uf"  type="text" placeholder="ex.: CE" required/>
+                <label for="uf">UF *</label>
+                <input id="uf"  type="text" placeholder="ex.: CE" class="uf required" oninput="validarUf()"/>
+                <span id="msg">Campo obrigatório</span>
               </p>
 
               <p> 
@@ -64,4 +71,5 @@
         </div>
     </div>
 </body>
+<script src="../js/address-form.js"></script>
 </html>
