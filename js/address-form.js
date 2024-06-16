@@ -2,46 +2,40 @@ import MenuDashboard from "../js/menu-dashboard.js";
 
 document.getElementById("navArea").innerHTML = MenuDashboard();
 
-/*const form = document.getElementById('form_address')
-const validarCampo = document.getElementById('cep_cad');
-const validarRua = document.getElementById('rua_cad');
-const validarNumero = document.getElementById('numero_cad');
-const validarBairro = document.getElementById('bairro');
-const validarCidade = document.getElementById('cidade');
-const validarUf = document.getElementById('uf');
-const setError = document.querySelectorAll('#msg')
-const validarInput = document.getElementById('submit');
-
-
-validarInput.addEventListener("click", function (){
-    console.log('clicked')
-
-
-    const cep_cadValue = validarCampo.value;
-    const rua_cadValue = validarRua.valeu;
-    const numero_cadValue = validarNumero.value;
-    const bairroValue = validarBairro.value;
-    const cidadeValue = validarCidade.value;
-    const ufValue = validarUf.value;
-
-    if(cep_cadValue == '' || rua_cadValue == '' || numero_cadValue == '' || bairroValue == '' || cidadeValue == '' || ufValue == ''){
-      setError.textContent = 'Campo Obrigatório';
-    }
-}); */
-
 const form = document.getElementById('form');
 const camp = document.querySelectorAll('.required');
+const complemento = document.getElementById('complemento');
 const span = document.querySelectorAll('#msg');
 const validarInput = document.getElementById('submit')
 
 validarInput.addEventListener('click', (event) => {
- event.preventDefault();
- validarCampo();
- validarRua();
- validarNumero();
- validarBairro();
- validarCidade();
- validarUf();
+    let success = true;
+    success = validarCep() && success;
+    success = validarRua() && success;
+    success = validarNumero() && success;
+    success = validarBairro() && success;
+    success = validarCidade() && success;
+    success = validarUf() && success;
+    if(!success) {
+        event.preventDefault();
+    } else {
+        event.preventDefault();
+        let addressInfo = {
+            "cep": camp[0].value,
+            "rua": camp[1].value,
+            "numero": camp[2].value,
+            "complemento": complemento.value,
+            "bairro": camp[3].value,
+            "cidade": camp[4].value,
+            "uf": camp[5].value,
+        };
+        window.localStorage.setItem('address-'+Date.now(), JSON.stringify(addressInfo));
+        for (let i=0;i<=5;i++) {
+            camp[i].value = null;
+        }
+        complemento.value = null;
+        alert("Endereço cadastrado com sucesso!");
+    };
 
 });
 
@@ -55,65 +49,70 @@ function removeError(index){
     span[index].style.display = 'none'
 }
 
-function validarCampo(){
+function validarCep(){
     if(camp[0].value.length < 8) {
-        setError(0)
+        setError(0);
+        return false;
     }
-
     else{
-        removeError(0)
+        removeError(0);
+        camp[0].value = zipCodeMask(camp[0].value);
+        return true;
     } 
-
 }
 
 function validarRua(){
     if(camp[1].value.length < 2) {
-        setError(1)
-    }
-    
+        setError(1);
+        return false;
+    }    
     else{
-        removeError(1)
+        removeError(1);
+        return true;
     }
 }
 
-
 function validarNumero(){
     if(camp[2].value.length < 2) {
-        setError(2)
-    }
-        
+        setError(2);
+        return false;
+    } 
     else{
-        removeError(2)
+        removeError(2);
+        return true;
     }
 }
 
 function validarBairro(){
     if(camp[3].value.length < 2) {
-        setError(3)
-    }
-            
+        setError(3);
+        return false;
+    }         
     else{
-        removeError(3)
+        removeError(3);
+        return true;
     }
 }
 
 function validarCidade(){
     if(camp[4].value.length < 2) {
-        setError(4)
-    }
-                
+        setError(4);
+        return false;
+    }   
     else{
-    removeError(4)
+        removeError(4);
+        return true;
     }
 }
 
 function validarUf(){
     if(camp[5].value.length < 2) {
-        setError(5)
-    }
-                
+        setError(5);
+        return false;
+    }             
     else{
-    removeError(5)
+        removeError(5);
+        return true;
     }
 }
 
