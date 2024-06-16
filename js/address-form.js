@@ -8,6 +8,10 @@ const complemento = document.getElementById('complemento');
 const span = document.querySelectorAll('#msg');
 const validarInput = document.getElementById('submit')
 
+// Lê a lista de endereços existente
+let addressList = window.localStorage.getItem('address-list') ?? '[]';
+addressList = JSON.parse(addressList);
+
 validarInput.addEventListener('click', (event) => {
     let success = true;
     success = validarCep() && success;
@@ -29,7 +33,14 @@ validarInput.addEventListener('click', (event) => {
             "cidade": camp[4].value,
             "uf": camp[5].value,
         };
-        window.localStorage.setItem('address-'+Date.now(), JSON.stringify(addressInfo));
+
+        // Acrescenta mais um endereço na lista
+        addressList.push(addressInfo);
+        
+        // Salva a lista de endereços no localstorage
+        window.localStorage.setItem('address-list', JSON.stringify(addressList));
+
+        // Limpa os campos do formulário
         for (let i=0;i<=5;i++) {
             camp[i].value = null;
         }
