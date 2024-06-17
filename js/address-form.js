@@ -7,14 +7,18 @@ const camp = document.querySelectorAll('.required');
 const complemento = document.getElementById('complemento');
 const span = document.querySelectorAll('#msg');
 const validarInput = document.getElementById('submit')
+const cep = document.getElementById('cep_cad');
 
 // Lê a lista de endereços existente
 let addressList = window.localStorage.getItem('address-list') ?? '[]';
 addressList = JSON.parse(addressList);
 
+cep.addEventListener('change', (event) => {
+    let success = validarCep();
+});
+
 validarInput.addEventListener('click', (event) => {
     let success = true;
-    success = validarCep() && success;
     success = validarRua() && success;
     success = validarNumero() && success;
     success = validarBairro() && success;
@@ -63,10 +67,34 @@ function removeError(index){
 function validarCep(){
     if(camp[0].value.length < 8) {
         setError(0);
+        camp[1].value = null;
+        camp[3].value = null;
+        camp[4].value = null;
+        camp[5].value = null;
         return false;
     }
     else{
         removeError(0);
+        let url = `https://viacep.com.br/ws/${camp[0].value}/json/`;
+        let request = fetch(url)
+            .then(response => response.json())
+            .then(json => {
+                if(json.erro) {
+                    camp[1].value = null;
+                    camp[3].value = null;
+                    camp[4].value = null;
+                    camp[5].value = null;
+                    alert("CEP não identificado nos correios!");
+                }
+                else {
+                    camp[1].value = json.logradouro;
+                    camp[3].value = json.bairro;
+                    camp[4].value = json.localidade;
+                    camp[5].value = json.uf;
+                };
+                console.log(json);
+            });
+
         camp[0].value = zipCodeMask(camp[0].value);
         return true;
     } 
