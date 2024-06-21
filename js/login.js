@@ -7,6 +7,10 @@ const elements = {
 
 }
 
+const createAccount = document.querySelector('#create');
+const forgotPassw = document.querySelector('#forgot');
+const googleAccount = document.querySelector('#google');
+
 const showEmailError = (msg) => {
   elements.emailError.textContent = msg;
 }
@@ -28,39 +32,41 @@ let autenticData = window.localStorage.getItem('autentication') ?? '[]';
 autenticData = JSON.parse(autenticData);
     
 elements.loginPage.addEventListener('click', (event) => {
-  let senhaLength = elements.inputSenha.value.length;
-  let emailLength = elements.inputEmail.value.length;
-  let success = true;
-
-  showEError('', 'email-error'); 
-  showSError('', 'senha-error');
-    
-  if(!emailLength) {
-    showEError("Campo obrigatório.", 'email-error');
-    event.preventDefault();
-    success = false;
-  }    
-  else if(validateEmail(elements.inputEmail.value) !== true) {
-    showEError('Por favor, insira um endereço de e-mail válido.', 'email-error');
-    event.preventDefault();
-    success = false;
-  }
-    
-  if (!senhaLength) {
-    showSError("Campo obrigatório.", 'senha-error');
-    event.preventDefault();
-    success = false;
-  }
+  // Só faz a conferência se o usuário clicou no botão ENTRAR
+	if ( !(createAccount.contains( event.target ) || forgotPassw.contains( event.target ) || googleAccount.contains( event.target )) ){
+    let senhaLength = elements.inputSenha.value.length;
+    let emailLength = elements.inputEmail.value.length;
+    let success = true;
   
-  if (success && ((elements.inputEmail.value !==  autenticData.email) || (elements.inputSenha.value !==  autenticData.senha))) {
-      showEError('Email ou senha inválidos!', 'email-error');
-      showSError("Email ou senha inválidos!", 'senha-error');
+    showEError('', 'email-error'); 
+    showSError('', 'senha-error');
+      
+    if(!emailLength) {
+      showEError("Campo obrigatório.", 'email-error');
       event.preventDefault();
       success = false;
+    }    
+    else if(validateEmail(elements.inputEmail.value) !== true) {
+      showEError('Por favor, insira um endereço de e-mail válido.', 'email-error');
+      event.preventDefault();
+      success = false;
+    }
+      
+    if (!senhaLength) {
+      showSError("Campo obrigatório.", 'senha-error');
+      event.preventDefault();
+      success = false;
+    }
+    
+    if (success && ((elements.inputEmail.value !==  autenticData.email) || (elements.inputSenha.value !==  autenticData.senha))) {
+        showEError('Email ou senha inválidos!', 'email-error');
+        showSError("Email ou senha inválidos!", 'senha-error');
+        event.preventDefault();
+        success = false;
+    }
+  
+    window.localStorage.setItem('logged-in', success);
   }
-
-  window.localStorage.setItem('logged-in', success);
-
 });
     
 function validateEmail(inputEmailString) {
