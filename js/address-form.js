@@ -24,7 +24,12 @@ validarInput.addEventListener('click', (event) => {
         event.preventDefault();
     } else {
         event.preventDefault();
+
+        // Cria um ID para o endereço
+        let id = camp[0].value.replace("-","") + (Math.random() * 10000).toFixed();
+
         let addressInfo = {
+            "id" : id,
             "cep": camp[0].value,
             "rua": camp[1].value,
             "numero": camp[2].value,
